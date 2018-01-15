@@ -1,0 +1,954 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Anton');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+
+audio {
+	display: none;
+}
+
+body, img {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #2b2b2b;
+}
+
+body, html {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+#main {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	/*width: 5700px;*/
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	font-size: 10px;
+}
+
+#mainWidth {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#audio {
+	position: fixed;
+	z-index: 999;
+	top: 10px;
+	right: 10px;
+	width: 20px;
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#intro {
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+	z-index: 9999999;
+	text-align: center;
+	
+	opacity: 0;
+	-webkit-animation: intro2 4s ease;
+	animation: intro2 4s ease;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+}
+
+#intro #credits {
+	position: relative;
+	top: 10%;
+}
+
+#intro #exit {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 30px;
+	height: 30px;
+	opacity: 0.8;
+	cursor: pointer;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	z-index: 999999;
+}
+
+#intro #exit:hover {
+	opacity: 1;
+}
+
+#exit div {
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 5px;
+	left: 12px;
+}
+
+#exit div:nth-of-type(1){
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+#exit div:nth-of-type(2){
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+#intro #title {
+	font-size: 12em;
+	z-index: 99;
+	-webkit-animation: intro 4s ease;
+	animation: intro 4s ease;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: white;
+}
+
+#intro #credit {
+	font-size: 3em;
+	position: relative;
+	z-index: 99;
+	opacity: 0;
+	-webkit-animation: intro 4s ease 2s;
+	animation: intro 4s ease 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: white;
+}
+
+#intro p {
+	width: 80%;
+	margin: 20px auto 0 auto;
+	
+	font-size: 1.7em;
+	z-index: 99;
+	opacity: 0;
+	-webkit-animation: intro 4s ease 2s;
+	animation: intro 4s ease 2s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	text-transform: uppercase;
+	font-family: 'Slabo 27px', serif;
+	text-transform: none !important;
+	color: white;
+}
+
+#intro p:nth-of-type(2) {
+	margin: 5px auto 0 auto;
+}
+
+#intro a {
+	display: inline-block;
+	background: #e6ee4e;
+	z-index: 99;
+	opacity: 0;
+	-webkit-animation: intro 4s ease 3s;
+	animation: intro 4s ease 3s;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	
+	text-transform: uppercase;
+	font-family: 'Anton', sans-serif !important;
+	font-weight: lighter;
+	color: #33350c;
+	text-decoration: none;
+	padding: 5px;
+	
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+}
+
+
+@keyframes intro {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes intro {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes intro2 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+@-webkit-keyframes intro2 {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-height: 600px) {
+	#main {
+		font-size: 8px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#main {
+		font-size: 8px;
+	}
+}
+
+h1 {
+	text-transform: uppercase;
+	font-family: 'Anton', sans-serif !important;
+	color: #19201c;
+	
+	-webkit-transition: opacity 0.4s !important;
+	transition: opacity 0.4s !important;
+}
+
+.pushToFront {
+	z-index: 130 !important;
+}
+
+#textOne {
+	position: absolute;
+	width: 23.5%;
+	left: 7.3%;
+	top: 15%;
+	font-size: 2.6em;
+	z-index: 99;
+	
+	opacity: 0;
+}
+
+#textTwo {
+	position: absolute;
+	width: 10%;
+	left: 30.5%;
+	top: 40%;
+	font-size: 2.6em;
+	z-index: 89;
+	text-align: right;
+	
+	opacity: 0;
+}
+
+#textThree {
+	position: absolute;
+	width: 16.5%;
+	left: 58.25%;
+	top: 14.16%;
+	font-size: 2.6em;
+	z-index: 89;
+	text-align: right;
+	opacity: 0;
+}
+
+#textGrave {
+	position: absolute;
+	width: 6%;
+	left: 67.5%;
+	top: 59%;
+	font-size: 2.6em;
+	z-index: 89;
+	text-align: center;
+	opacity: 0;
+}
+
+
+#textFour {
+	position: absolute;
+	width: 25%;
+	left: 105%;
+	top: 4.1%;
+	font-size: 2.6em;
+	z-index: 89;
+	text-align: left;
+	opacity: 1;
+}
+
+#textFive {
+	position: absolute;
+	width: 25%;
+	left: 137.5%;
+	top: 16.6%;
+	font-size: 1.8em;
+	z-index: 29;
+	text-align: left;
+	opacity: 0.7;
+}
+
+#textSix {
+	width: 40%;
+	position: absolute;
+	left: 223.2%;
+	top: 25%;
+	font-size: 2.6em;
+	z-index: 89;
+	text-align: left;
+	
+	opacity: 0;
+}
+
+#textSeven {
+	position: fixed;
+	width: 80%;
+	left: 10%;
+	top: 8.3%;
+	font-size: 3.2em;
+	z-index: 89;
+	text-align: center;
+}
+
+#textSeven span {
+	opacity: 0;
+	-webkit-transition: opacity 3s;
+	transition: opacity 3s;
+}
+
+#favtreeActiveWrapper {
+	position: absolute;
+	height: 100%;
+	width: 3%;
+	left: 39%;
+	top: 0;
+	z-index: 9999;
+}
+
+#favtreeActive {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: radial-gradient(white, rgba(255,255,255,0) 75%);
+	border-radius: 999px;
+	opacity: 0;
+	
+	-webkit-animation: favtree 3s ease infinite;
+	animation: favtree 3s ease infinite;
+}
+
+#favtree {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 31.75%;
+	top: 0;
+	z-index: 95;
+	opacity: 0;
+	-webkit-transition: opacity 2s ease;
+	transition: opacity 2s ease;
+}
+
+#birds {
+	position: absolute;
+	height: 3%;
+	width: auto;
+	top: 33%;
+	left: 10%;
+	z-index: 21;
+	opacity: 0.6;
+}
+
+#sky {
+	position:  absolute;
+	height: 100%;
+	width: auto;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#sun {
+	position:  absolute;
+	height: 29.5%;
+	width: auto;
+	left: 26.7%;
+	top: 0;
+	z-index: 20;
+}
+
+#back {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	top: 0;
+	left: 4.7%;
+	z-index: 30;
+}
+
+#middle {
+	position: absolute;
+	height: 64.4%;
+	width: auto;
+	left: 0;
+	bottom: 0;
+	z-index: 40;
+}
+
+#front {
+	position: absolute;
+	height: 66.4%;
+	width: auto;
+	left: 0;
+	bottom: 0;
+	z-index: 50;
+}
+
+#middletrees {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 5.47%;
+	top: 0;
+	z-index: 60;
+}
+
+#middletrees2 {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 60%;
+	top: 0;
+	z-index: 60;
+}
+
+#leavesWrapper {
+	position: absolute;
+	height: 69.6%;
+	left: 0;
+	top: 0;
+	z-index: 70;
+}
+
+#leaves {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	top: 0;
+	z-index: 70;
+	
+	-webkit-animation: backleaves 6s ease infinite;
+	animation: backleaves 6s ease infinite;
+}
+
+#graveWrapper {
+	position: absolute;
+	height: 18.4%;
+	left: 68.75%;
+	bottom: 11.6%;
+	z-index: 80;
+}
+
+#grave {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	top: 0;
+	z-index: 80;
+	
+	-webkit-animation: grave 3s ease infinite;
+	animation: grave 3s ease infinite;
+}
+
+#graveoutline {
+	position: absolute;
+	height: 18.4%;
+	left: 68.75%;
+	bottom: 11.6%;
+	z-index: 999;
+	background: rgba(255,255,255,0);
+}
+
+#fronttrees {
+	position: absolute;
+	height: 95.1%;
+	width: auto;
+	left: 0;
+	top: 0;
+	z-index: 90;
+}
+
+#fronttrees2 {
+	position: absolute;
+	height: 95.1%;
+	width: auto;
+	left: 75%;
+	top: 0;
+	z-index: 91;
+}
+
+#fronttrees3 {
+	position: absolute;
+	height: 95.1%;
+	width: auto;
+	left: 175%;
+	top: 0;
+	z-index: 92;
+}
+
+#grass {
+	position: absolute;
+	height: 40.3%;
+	width: auto;
+	left: 0%;
+	bottom: 0;
+	z-index: 100;
+}
+
+#rockWrapper {
+	position: absolute;
+	height: 25%;
+	left: 280%;
+	bottom: 8.3%;
+	z-index: 91;
+}
+
+#rock {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: 0;
+	bottom: 0;
+	z-index: 91;
+	
+	-webkit-animation: rockactive 3s ease infinite;
+	animation: rockactive 3s ease infinite;
+}
+
+#rockoutline {
+	display: block;
+	position: absolute;
+	height: 25%;
+	width: 18%;
+	left: 279%;
+	bottom: 8.4%;
+	z-index: 9999;
+	background: white;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#kid {
+	position: absolute;
+	height: 23%;
+	left: 10%;
+	bottom: 13%;
+	z-index: 96;
+}
+
+#kidBody {
+	position: absolute;
+	width: 89.6%;
+	height: 76.5%;
+	top: 0;
+	left: 10.3%;
+	z-index: 95;
+}
+
+#kidRightleg {
+	position: absolute;
+	width: 66.3%;
+	height: 29%;
+	bottom: 0;
+	right: 11.2%;
+	z-index: 94;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+}
+
+#kidLeftleg {
+	position: absolute;
+	width: 55.1%;
+	height: 31.8%;
+	bottom: 0;
+	left: 0;
+	z-index: 93;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+}
+
+#boy {
+	position: absolute;
+	height: 23%;
+	left: 7%;
+	bottom: 13%;
+	z-index: 96;
+}
+
+#boyBody {
+	position: absolute;
+	width: 93.6%;
+	height: 74%;
+	top: 0;
+	right: 0.9%;
+	z-index: 95;
+}
+
+#boyRightleg {
+	position: absolute;
+	width: 69%;
+	height: 28.75%;
+	bottom: 0;
+	left: 8.1%;
+	z-index: 94;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+}
+
+#boyLeftleg {
+	position: absolute;
+	width: 54.5%;
+	height: 33.4%;
+	bottom: 0;
+	left: 0;
+	z-index: 93;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+}
+
+#frontleavesWrapper {
+	position: absolute;
+	height: 42.5%;
+	left: 0;
+	top: 0;
+	z-index: 120;
+}
+
+#frontleaves {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	left: -8px;
+	top: 0;
+	z-index: 120;
+	
+	-webkit-transform-origin: bottom right;
+	transform-origin: bottom right;
+	-webkit-animation: frontleaves 8s ease infinite;
+	animation: frontleaves 8s ease infinite;
+}
+
+#tree {
+	position: absolute;
+	height: 100%;
+	width: auto;
+	top: 0;
+	left: 47.2%;
+	z-index: 130;
+}
+
+#sunlight {
+	position: absolute;
+	height: 60.25%;
+	width: auto;
+	left: 16.75%;
+	top: 0;
+	z-index: 140;
+}
+
+/*aniamtions*/
+
+@keyframes frontleaves {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(2deg);
+		transform: rotate(2deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes frontleaves {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(2deg);
+		transform: rotate(2deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes backleaves {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+@-webkit-keyframes backleaves {
+	0% {
+		-webkit-transform: rotate(0);
+		transform: rotate(0);
+	}
+	50% {
+		-webkit-transform: rotate(-4deg);
+		transform: rotate(-4deg);
+	}
+	100% {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes favtree {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.3;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes favtree {
+	0% {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.3;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 0;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+#sky {
+	-webkit-animation: clouds 16s ease infinite;
+	animation: clouds 16s ease infinite;
+}
+
+@keyframes clouds {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes clouds {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.5);
+		transform: scale(1.5);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+#birds {
+	-webkit-animation: birds 140s ease infinite;
+	animation: birds 140s ease infinite;
+}
+
+@keyframes birds {
+	0% {
+		left: 20%;
+	}
+	70% {
+		left: 110%;	
+	}
+	70.00001% {
+		left: -5%;
+	}
+	100% {
+		left: 20%;
+	}
+}
+@-webkit-keyframes birds {
+	0% {
+		left: 20%;
+	}
+	70% {
+		left: 110%;	
+	}
+	70.00001% {
+		left: -5%;
+	}
+	100% {
+		left: 20%;
+	}
+}
+
+#sunlight {
+	-webkit-animation: sunlight 20s ease infinite;
+	animation: sunlight 20s ease infinite;
+}
+
+@keyframes sunlight {
+	0% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		-webkit-transform: scale(1.4);
+		transform: scale(1.4);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes grave {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.5;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes grave {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.5;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes rockactive {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes rockactive {
+	0% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+	50% {
+		opacity: 0.6;
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
