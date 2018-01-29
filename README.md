@@ -1,2 +1,4 @@
 # The Walk
+http://magdi-hazaa.com/the_walk/
+
 The Walk is probably my favorite personal project. It's a interactive browser-based virtual enviroenment that tells the story of a kid helping his friend deal with grief. The story is told through text as the two kids explore the woods where one of them used to walk his recently-decesed dog. I started by writing the story and creating the vector-based visuals with Adobe Illustrator, along with some post-processing in Photoshop. For the code, I used HTML/CSS for the responsive layout, and vanilla JavaScript with OO pattern and a gameloop function to control the movement, interactivity, flow, and allowing the user to interact with the website using multiple keys at once (left and right arrows to walk, shift to run, and space to highlight the text.
